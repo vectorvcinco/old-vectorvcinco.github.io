@@ -1,7 +1,7 @@
 <nav>
   <ul class="sticky-top">
-    <li *ngFor="let link of links">
-      <a href="{{ link.href }}">{{ link.title }}</a>
+    <li *ngFor="let item of items | async">
+      <a href="{{ item.url }}">{{ item.site }}</a>
     </li>
   </ul>
 </nav>

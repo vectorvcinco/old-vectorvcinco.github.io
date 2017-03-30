@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from '../link';
 
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -8,14 +10,10 @@ import { Link } from '../link';
 })
 export class SidebarComponent implements OnInit {
 
-  links: Link[] = [
-    {title: "Home", href: "http://vectorvcinco.design"},
-    {title: "Store", href: "http://store.vectorvcinco.design"},
-    {title: "Facebook", href: "http://facebook.com/vectorvcinco"},
-    {title: "Instagram", href: "http://instagram.com/vectorvcinco"}
-  ];
+  items: FirebaseListObservable<any>;
 
-  constructor() {
+  constructor(private af: AngularFire) {
+    this.items = this.af.database.list('/links');
   }
 
   ngOnInit() {
