@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CardInterface } from '../card-interface';
-import { CardServiceService } from './card-service.service';
-import { Observable }        from 'rxjs/Observable';
 
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
