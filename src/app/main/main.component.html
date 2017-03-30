@@ -1,15 +1,15 @@
 <div class="card-columns">
   <div *ngFor="let card of cards" [ngClass]="card.class">
-    <img class="card-img-top img-fluid" src="{{ card.cover }}" alt="{{ card.project }} image">
-    <div class="card-img-overlay">
-      <h4 class="card-title">{{ card.project }}</h4>
-      <p class="card-text">{{ card.description }}</p>
-      <p class="card-text">
-        <small class="text-muted">{{ card.productiondate }}</small>
-      </p>
-      <p *ngIf="card.client" class="card-text">
-        <small class="text-muted">Cliente: {{ card.client }}</small>
-      </p>
-    </div>
+      <img class="card-img-top img-fluid" src="{{ card.cover }}" alt="{{ card.project }} image">
+      <div class="card-img-overlay cardinfo">
+        <h4 class="card-title">{{ card.project }}</h4>
+        <p class="card-text">{{ card.description }}</p>
+        <p class="card-text">
+          <small class="text-muted">{{ card.productiondate }}</small>
+        </p>
+        <p *ngIf="card.client" class="card-text">
+          <small class="text-muted">Cliente: {{ card.client }}</small>
+        </p>
+      </div>
   </div>
 </div>

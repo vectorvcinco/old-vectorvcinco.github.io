@@ -1,0 +1,7 @@
+.card .cardinfo {
+  visibility: hidden;
+}
+
+.card:hover .cardinfo {
+  visibility:inherit;
+}
