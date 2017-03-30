@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CardInterface } from '../card-interface';
 
 @Component({
   selector: 'app-main',
@@ -6,6 +7,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  cards: CardInterface[] = [
+    { cover: "https://media.giphy.com/media/l3vRlzAvJsfZkSMPS/giphy.gif",
+      project: "Proyecto Ejemplo1",
+      description: "Descripción",
+      productiondate: "Verano 2016",
+      client: "Cliente",
+      class: {card: true} },
+    { cover: "https://media.giphy.com/media/l3vRlzAvJsfZkSMPS/giphy.gif",
+      project: "Proyecto Ejemplo2",
+      description: "Descripción",
+      productiondate: "Verano 2016",
+      client: "Cliente",
+      class: {card: true} },
+    { cover: "https://media.giphy.com/media/l3vRlzAvJsfZkSMPS/giphy.gif",
+      project: "Proyecto Ejemplo3",
+      description: "Descripción",
+      productiondate: "Verano 2016",
+      client: "Cliente",
+      class: {card: true} },
+    { cover: "https://media.giphy.com/media/l3vRlzAvJsfZkSMPS/giphy.gif",
+      project: "Proyecto Ejemplo4",
+      description: "Descripción",
+      productiondate: "Verano 2016",
+      client: "Cliente",
+      class: {card: true} },
+    { cover: "https://media.giphy.com/media/l3vRlzAvJsfZkSMPS/giphy.gif",
+      project: "Proyecto Ejemplo5",
+      description: "Descripción",
+      productiondate: "Verano 2016",
+      class: {card: true} },
+  ]
 
   constructor() { }
 
