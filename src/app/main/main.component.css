@@ -1,0 +1,12 @@
+main {
+  margin-top: 25px;
+}
+
+.card .cardinfo {
+  visibility: hidden;
+}
+
+.card:hover .cardinfo {
+  visibility:inherit;
+  background-color: rgba(0, 0, 0, 0.3);
+}

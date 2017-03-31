@@ -1,0 +1,8 @@
+<nav class="nav flex-column sticky-top">
+  <a class="nav-link" href="#">
+    <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/portfolio-ed26e.appspot.com/o/logo-02.svg?alt=media&token=cad6ad4e-7418-458c-9c6b-0442dc645487" alt="Vectorvcinco Logo">
+  </a>
+  <a *ngFor="let item of items | async" class="nav-link" href="{{ item.url }}">
+    {{ item.site }}
+  </a>
+</nav>
