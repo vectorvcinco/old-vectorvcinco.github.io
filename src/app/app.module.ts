@@ -22,6 +22,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
+import { FooterComponent } from './footer/footer.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAK4Jeq3lGidFVa2AaLaHSBO8BIQrKXDK8",
@@ -36,7 +37,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     SidebarComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

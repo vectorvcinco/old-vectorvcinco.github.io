@@ -1,7 +1,7 @@
 nav {
-  height: 100%;
-}
-
-ul {
   margin-top: 50%;
+}
+.logo {
+  width: 100%;
+  max-width: 150px;
 }
