@@ -28,14 +28,18 @@ export class NgbdModalContent {
 export class CardComponent implements OnInit {
 
   @Input() project: any;
+  link: boolean = false;
 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+    if (this.project.photos) {
+      this.link = true;
+    }
   }
 
   open(project: any) {
-    if (this.project.photos) {
+    if (this.link) {
       const modalRef = this.modalService.open(NgbdModalContent);
       modalRef.componentInstance.projectinfo = project;
     }
