@@ -1,0 +1,10 @@
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let photo of getPhotos()">
+    <img src="{{photo}}" height="500px" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>{{ projectinfo.project }}</h3>
+      <p>{{ projectinfo.description }}</p>
+      <p><small>{{ projectinfo.productiondate }}</small></p>
+    </div>
+  </ng-template>
+</ngb-carousel>
