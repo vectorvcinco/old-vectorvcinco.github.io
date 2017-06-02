@@ -23,6 +23,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './main/card/card.component';
+import { CarrouselComponent } from './main/carrousel/carrousel.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAK4Jeq3lGidFVa2AaLaHSBO8BIQrKXDK8",
@@ -38,7 +40,9 @@ export const firebaseConfig = {
     AppComponent,
     SidebarComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent,
+    CarrouselComponent
   ],
   imports: [
     BrowserModule,

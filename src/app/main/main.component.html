@@ -1,19 +1,5 @@
 <main>
   <div class="card-columns">
-    <div *ngFor="let item of items | async" class="card card-inverse">
-
-      <img class="card-img img-fluid" src="{{ item.cover }}" alt="{{ item.project }} image">
-      <div class="card-img-overlay cardinfo">
-        <h4 class="card-title">{{ item.project }}</h4>
-        <p class="card-text">{{ item.description }}</p>
-        <p class="card-text">
-          <small>{{ item.productiondate }}</small>
-        </p>
-        <p *ngIf="item.client" class="card-text">
-          <small>Cliente: {{ item.client }}</small>
-        </p>
-      </div>
-
-    </div>
+    <card [project]="item" *ngFor="let item of items | async"></card>
   </div>
 </main>
