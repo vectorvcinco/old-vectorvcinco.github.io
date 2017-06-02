@@ -1,4 +1,4 @@
-import { Input, Component, OnInit } from '@angular/core';
+import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -10,9 +10,16 @@ export class CardComponent implements OnInit {
   @Input()
   project: any;
 
+  @Output()
+  cardClicked = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  carouselEmmiter(event: any){
+    this.cardClicked.emit("Me hicieron click!");
   }
 
 }
