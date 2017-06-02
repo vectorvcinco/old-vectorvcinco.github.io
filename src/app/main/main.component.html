@@ -2,8 +2,4 @@
   <div class="card-columns">
     <card [project]="item" (cardClicked)="showCarousel($event)" *ngFor="let item of items | async"></card>
   </div>
-
-  <div *ngFor="let item of items | async">
-    <carousel *ngIf="item.photos" [show]="carousel" [projectinfo]="item"></carousel>
-  </div>
 </main>

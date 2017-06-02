@@ -1,4 +1,24 @@
 import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+
+@Component({
+  selector: 'carousel-content',
+  templateUrl: './carousel.Component.html'
+})
+export class NgbdModalContent {
+  @Input() projectinfo;
+
+  constructor(public activeModal: NgbActiveModal) {}
+
+  getPhotos(){
+    if (this.projectinfo.photos){
+      return Object.keys(this.projectinfo.photos).map(key => this.projectinfo.photos[key]);
+    }
+    else {
+      return "";
+    }
+  }
+}
 
 @Component({
   selector: 'card',
@@ -7,19 +27,17 @@ import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input()
-  project: any;
+  @Input() project: any;
 
-  @Output()
-  cardClicked = new EventEmitter<string>();
-
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
-  carouselEmmiter(event: any){
-    this.cardClicked.emit("Me hicieron click!");
+  open(project: any) {
+    if (this.project.photos) {
+      const modalRef = this.modalService.open(NgbdModalContent);
+      modalRef.componentInstance.projectinfo = project;
+    }
   }
-
 }

@@ -25,8 +25,7 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { FooterComponent } from './footer/footer.component';
-import { CardComponent } from './main/card/card.component';
-import { CarrouselComponent } from './main/carrousel/carrousel.component';
+import { CardComponent, NgbdModalContent } from './main/card/card.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAK4Jeq3lGidFVa2AaLaHSBO8BIQrKXDK8",
@@ -44,8 +43,9 @@ export const firebaseConfig = {
     MainComponent,
     FooterComponent,
     CardComponent,
-    CarrouselComponent
+    NgbdModalContent
   ],
+  entryComponents: [NgbdModalContent],
   imports: [
     BrowserModule,
     FormsModule,

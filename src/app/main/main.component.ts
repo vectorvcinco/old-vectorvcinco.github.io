@@ -11,16 +11,11 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 export class MainComponent implements OnInit {
 
   items: FirebaseListObservable<any>;
-  carousel: string = undefined;
 
   constructor(private af: AngularFireDatabase) {
     this.items = this.af.list('/items');
   }
 
   ngOnInit() { }
-
-  showCarousel(event: any){
-    this.carousel = event;
-  }
 
 }
