@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -23,6 +25,7 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { FooterComponent } from './footer/footer.component';
+import { CardComponent, NgbdModalContent } from './main/card/card.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAK4Jeq3lGidFVa2AaLaHSBO8BIQrKXDK8",
@@ -38,17 +41,21 @@ export const firebaseConfig = {
     AppComponent,
     SidebarComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent,
+    NgbdModalContent
   ],
+  entryComponents: [NgbdModalContent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
 
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     NgbModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

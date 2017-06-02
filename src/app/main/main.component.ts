@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardInterface } from '../card-interface';
 
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-main',
@@ -12,8 +12,8 @@ export class MainComponent implements OnInit {
 
   items: FirebaseListObservable<any>;
 
-  constructor(private af: AngularFire) {
-    this.items = this.af.database.list('/items');
+  constructor(private af: AngularFireDatabase) {
+    this.items = this.af.list('/items');
   }
 
   ngOnInit() { }
